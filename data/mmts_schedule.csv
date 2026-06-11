@@ -1,0 +1,25 @@
+train_id,train_name,origin,destination,departure_time,arrival_time,route,base_crowding
+47151,HYB-LPI Local,Nampally,Lingampalli,08:15,09:00,Line-1,High
+47152,HYB-LPI Local,Nampally,Lingampalli,09:30,10:15,Line-1,High
+47153,HYB-LPI Local,Nampally,Lingampalli,12:00,12:45,Line-1,Low
+47154,HYB-LPI Local,Nampally,Lingampalli,17:45,18:30,Line-1,High
+47155,LPI-HYB Local,Lingampalli,Nampally,08:30,09:15,Line-1,High
+47156,LPI-HYB Local,Lingampalli,Nampally,18:00,18:45,Line-1,High
+47211,FLK-LPI Local,Falaknuma,Lingampalli,07:30,08:40,Line-2,High
+47212,FLK-LPI Local,Falaknuma,Lingampalli,10:00,11:10,Line-2,Medium
+47213,FLK-LPI Local,Falaknuma,Lingampalli,16:15,17:25,Line-2,High
+47191,SC-FLK Local,Secunderabad,Falaknuma,08:45,09:20,Line-3,High
+47192,SC-FLK Local,Secunderabad,Falaknuma,14:00,14:35,Line-3,Low
+47193,SC-FLK Local,Secunderabad,Falaknuma,18:15,18:50,Line-3,High
+47195,KCG-LPI Local,Kacheguda,Lingampalli,09:15,10:20,Line-4,High
+47196,KCG-LPI Local,Kacheguda,Lingampalli,13:30,14:35,Line-4,Low
+47197,KCG-LPI Local,Kacheguda,Lingampalli,18:45,19:50,Line-4,High
+47220,BMT-SC Local,Begumpet,Secunderabad,08:00,08:25,Line-5,Medium
+47221,BMT-SC Local,Begumpet,Secunderabad,17:00,17:25,Line-5,High
+47230,HIT-SC Local,Hitech City,Secunderabad,09:00,09:40,Line-6,High
+47231,HIT-SC Local,Hitech City,Secunderabad,18:30,19:10,Line-6,High
+47232,SC-HIT Local,Secunderabad,Hitech City,08:10,08:50,Line-6,High
+47240,MLY-FLK Local,Malkajgiri,Falaknuma,10:30,11:15,Line-7,Low
+47241,FLK-MLY Local,Falaknuma,Malkajgiri,15:45,16:30,Line-7,Medium
+47250,STPD-KCG Local,Sitafalmandi,Kacheguda,11:00,11:20,Line-8,Low
+47251,KCG-STPD Local,Kacheguda,Sitafalmandi,19:30,19:50,Line-8,Medium
