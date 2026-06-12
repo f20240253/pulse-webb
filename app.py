@@ -9,63 +9,7 @@ import utils.translations
 importlib.reload(utils.translations)
 
 from utils.engine import find_trains, get_crowd_color, predict_train_delay
-from utils.translations import get_text
-
-
-
-# ── Data-level translation maps (station names + train names) ──────────────
-_STATIONS = {
-    "zh": {
-        "Begumpet": "贝贡佩特", "Falaknuma": "法拉克努马",
-        "Hitech City": "海科技城", "Kacheguda": "卡切古达",
-        "Lingampalli": "林甘帕利", "Malkajgiri": "马尔卡吉里",
-        "Nampally": "南帕利", "Secunderabad": "塞坎德拉巴德",
-        "Sitafalmandi": "西塔法尔曼迪",
-    },
-    "hi": {
-        "Begumpet": "बेगमपेट", "Falaknuma": "फ़लकनुमा",
-        "Hitech City": "हाईटेक सिटी", "Kacheguda": "काचेगुडा",
-        "Lingampalli": "लिंगमपल्ली", "Malkajgiri": "मल्काजगिरि",
-        "Nampally": "नामपल्ली", "Secunderabad": "सिकंदराबाद",
-        "Sitafalmandi": "सीताफलमंडी",
-    },
-}
-_TRAINS = {
-    "zh": {
-        "BMT-SC Local": "贝贡佩特-塞坎德拉巴德 本地",
-        "FLK-LPI Local": "法拉克努马-林甘帕利 本地",
-        "FLK-MLY Local": "法拉克努马-马尔卡吉里 本地",
-        "HIT-SC Local": "海科技城-塞坎德拉巴德 本地",
-        "HYB-LPI Local": "海得拉巴-林甘帕利 本地",
-        "KCG-LPI Local": "卡切古达-林甘帕利 本地",
-        "KCG-STPD Local": "卡切古达-西塔法尔曼迪 本地",
-        "LPI-HYB Local": "林甘帕利-海得拉巴 本地",
-        "MLY-FLK Local": "马尔卡吉里-法拉克努马 本地",
-        "SC-FLK Local": "塞坎德拉巴德-法拉克努马 本地",
-        "SC-HIT Local": "塞坎德拉巴德-海科技城 本地",
-        "STPD-KCG Local": "西塔法尔曼迪-卡切古达 本地",
-    },
-    "hi": {
-        "BMT-SC Local": "बेगमपेट-सिकंदराबाद लोकल",
-        "FLK-LPI Local": "फ़लकनुमा-लिंगमपल्ली लोकल",
-        "FLK-MLY Local": "फ़लकनुमा-मल्काजगिरि लोकल",
-        "HIT-SC Local": "हाईटेक सिटी-सिकंदराबाद लोकल",
-        "HYB-LPI Local": "हैदराबाद-लिंगमपल्ली लोकल",
-        "KCG-LPI Local": "काचेगुडा-लिंगमपल्ली लोकल",
-        "KCG-STPD Local": "काचेगुडा-सीताफलमंडी लोकल",
-        "LPI-HYB Local": "लिंगमपल्ली-हैदराबाद लोकल",
-        "MLY-FLK Local": "मल्काजगिरि-फ़लकनुमा लोकल",
-        "SC-FLK Local": "सिकंदराबाद-फ़लकनुमा लोकल",
-        "SC-HIT Local": "सिकंदराबाद-हाईटेक सिटी लोकल",
-        "STPD-KCG Local": "सीताफलमंडी-काचेगुडा लोकल",
-    },
-}
-
-def translate_station(name, language):
-    return _STATIONS.get(language, {}).get(name, name)
-
-def translate_train(name, language):
-    return _TRAINS.get(language, {}).get(name, name)
+from utils.translations import get_text, translate_station, translate_train
 
 # ── Map & Geolocation Data ──────────────────────────────────────────────────
 STATION_COORDS = {
@@ -310,6 +254,9 @@ with tab_dash:
     # Translate data-level values
     filtered_df["train_name"]   = filtered_df["train_name"].map(lambda s: translate_train(s, lang))
     filtered_df["destination"]  = filtered_df["destination"].map(lambda s: translate_station(s, lang))
+    filtered_df["base_crowding"] = filtered_df["base_crowding"].map(
+        lambda c: {"Low": t("crowd_low"), "Medium": t("crowd_medium"), "High": t("crowd_high_peak")}.get(c, c)
+    )
     filtered_df.columns = [
         t("col_train_id"), t("col_train_name"), t("col_destination"),
         t("col_departure"), t("col_arrival"), t("col_crowding"),

@@ -51,6 +51,8 @@ TRANSLATIONS = {
         "lang_option_en": "🇬🇧 English",
         "lang_option_zh": "🇨🇳 Chinese (Simplified)",
         "lang_option_hi": "🇮🇳 Hindi",
+        "lang_option_bo": "🇹🇱 Tibetan",
+        "lang_option_ja": "🇯🇵 Japanese",
         "lang_apply_note": "Your selection is saved automatically for this session.",
 
         # --- Columns ---
@@ -138,6 +140,8 @@ TRANSLATIONS = {
         "lang_option_en": "🇬🇧 英语",
         "lang_option_zh": "🇨🇳 中文（简体）",
         "lang_option_hi": "🇮🇳 印地语",
+        "lang_option_bo": "🇹🇱 藏语",
+        "lang_option_ja": "🇯🇵 日语",
         "lang_apply_note": "您的选择将在本次会话中自动保存。",
 
         "col_train_id": "列车编号",
@@ -224,6 +228,8 @@ TRANSLATIONS = {
         "lang_option_en": "🇬🇧 अंग्रेज़ी",
         "lang_option_zh": "🇨🇳 चीनी (सरलीकृत)",
         "lang_option_hi": "🇮🇳 हिन्दी",
+        "lang_option_bo": "🇹🇱 तिब्बती",
+        "lang_option_ja": "🇯🇵 जापानी",
         "lang_apply_note": "आपकी पसंद इस सत्र में स्वचालित रूप से सहेजी जाएगी।",
 
         "col_train_id": "ट्रेन आईडी",
@@ -292,7 +298,7 @@ TRANSLATIONS = {
         "delay_medium": "⚠️ འགྱངས་ཚད་འབྲིང་ཙམ་ཡོང་བའི་རེ་བ་ཡོད། སྔོན་ནས་འཆར་གཞི་སྒྲིག་རོགས།",
         "delay_high": "🔴 འགྱངས་ཚད་ཆེན་པོ་ཡོང་བའི་རེ་བ་ཡོད། ཐབས་ལམ་གཞན་ལ་བསམ་བློ་ཐོངས་རོགས།",
         "lang_option_bo": "🇹🇱 བོད་སྐད།",
-        "lang_option_ja": "🇯🇵 日本語",
+        "lang_option_ja": "🇯🇵 འཇར་པན་སྐད།",
         "lang_tab_title": "🌐 སྐད་གདམ།",
         "lang_tab_desc": "གདམ་གཟིགས་གྱི་སྐད་ཡིག་རྣམ་པའི་གཞི་གནས་བརྒྱུད།",
         "lang_current": "ད་ལྟར་གཞིག་སྐད།",
