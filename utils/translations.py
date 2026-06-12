@@ -266,6 +266,33 @@ TRANSLATIONS = {
         "map_direction_nw": "उत्तर-पश्चिम ↖️",
         "map_direction_stationary": "स्थिर 🛑",
     },
+    "bo": {
+        "page_title": "MMTS གཞིག་པ།",
+        "app_title": "🚉 MMTS གཞིག་པ: ཧ་རིགས་ཁང་གི་སྐད།",
+        "sidebar_filter_header": "ཚགས་བཹོ།",
+        "sidebar_station_label": "ཁབ་གནས་གཞིབར་བྱ།",
+        "sidebar_language_header": "🌐 སྐད་བརྗོད།",
+        "sidebar_language_label": "སྐད་གདམ་བྱ།",
+        "tab_dashboard": "📊 བཤད་པ",
+        "tab_route_finder": "🔍 འགྲོལ་བའི་ཁབ",
+        "tab_delay_predictor": "🧠 ཕབཐད་དུད།",
+        "tab_language": "🌐 སྐད་གདམ།",
+        "lang_option_bo": "🇹🇱 བོད་སྐད།",
+        "lang_option_ja": "🇯🇵 日本語"
+    },
+    "ja": {
+        "page_title": "MMTS パルス",
+        "app_title": "🚉 MMTS パルス：ハイデラバード交通ダッシュボード",
+        "sidebar_filter_header": "フィルター設定",
+        "sidebar_station_label": "出発駅を選択",
+        "sidebar_language_header": "🌐 言語設定",
+        "sidebar_language_label": "言語を選択",
+        "tab_dashboard": "📊 ダッシュボード",
+        "tab_route_finder": "🔍 ルート検索",
+        "tab_delay_predictor": "🧠 遅延予測",
+        "tab_language": "🌐 言語",
+        "lang_option_ja": "🇯🇵 日本語"
+    },
 }
 
 
