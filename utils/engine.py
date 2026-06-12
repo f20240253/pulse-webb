@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 from datetime import datetime
-from sklearn.ensemble import RandomForestRegressor
 
 # Load dataset helper
 def load_data():
@@ -30,18 +29,18 @@ def get_crowd_color(base_crowding, travel_time_str,
         return medium_label
     return low_label
 
-# 3. Machine Learning Delay Predictor
+# 3. Machine Learning Delay Predictor (reimplemented without scikit-learn)
 def predict_train_delay(is_rainy, peak_hour):
     """
-    Simple trained model simulation using historical delay logic features:
-    Rain (0 or 1), Peak Hour (0 or 1)
+    Simple delay prediction based on rain and peak hour.
+    Returns delay in minutes.
     """
-    # Create synthetic training matrix for the hackathon ML component
-    X_train = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
-    y_train = np.array([2, 8, 15, 35])  # Delay output in minutes
-
-    model = RandomForestRegressor(n_estimators=10, random_state=42)
-    model.fit(X_train, y_train)
-
-    prediction = model.predict([[int(is_rainy), int(peak_hour)]])
-    return round(prediction[0], 1)
+    # Mapping of (is_rainy, peak_hour) to delay minutes
+    mapping = {
+        (0, 0): 2,
+        (0, 1): 8,
+        (1, 0): 15,
+        (1, 1): 35,
+    }
+    key = (int(is_rainy), int(peak_hour))
+    return float(mapping.get(key, 0))
