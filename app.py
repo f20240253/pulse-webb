@@ -207,6 +207,8 @@ LANG_OPTIONS = {
     "🇬🇧 English":          "en",
     "🇨🇳 中文 (Chinese)":   "zh",
     "🇮🇳 हिन्दी (Hindi)":  "hi",
+    "🇹🇱 བོད་སྐད (Tibetan)": "bo",
+    "🇯🇵 日本語 (Japanese)": "ja",
 }
 LANG_DISPLAY = list(LANG_OPTIONS.keys())
 
@@ -666,6 +668,8 @@ with tab_lang:
         "en": t("lang_option_en"),
         "zh": t("lang_option_zh"),
         "hi": t("lang_option_hi"),
+        "bo": t("lang_option_bo"),
+        "ja": t("lang_option_ja"),
     }
     current_label = lang_labels[lang]
     st.info(f"**{t('lang_current')}:** {current_label}")
@@ -686,6 +690,6 @@ with tab_lang:
     ref_keys = ["app_title", "tab_dashboard", "tab_route_finder", "tab_delay_predictor",
                  "find_trains_btn", "predict_btn"]
     ref_data = {"Key": ref_keys}
-    for code in ["en", "zh", "hi"]:
+    for code in ["en", "zh", "hi", "bo", "ja"]:
         ref_data[lang_labels[code]] = [get_text(code, k) for k in ref_keys]
     st.dataframe(pd.DataFrame(ref_data), use_container_width=True, hide_index=True)
