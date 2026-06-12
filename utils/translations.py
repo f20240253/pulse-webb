@@ -298,7 +298,7 @@ TRANSLATIONS = {
         "crowd_medium": "🟡 Medium Congestion",
         "crowd_low": "🟢 Low Congestion (Comfortable)",
         "section_network_traffic": "📊 Network Traffic Insights",
-        "section_departures": "📅 Upcoming Departures"
+        "section_departures": "📅 Upcoming Departures",
 
         "tab_live_map": "🗺️ Live Map",
         "map_train_select_label": "Select Train to Track",
@@ -335,7 +335,7 @@ TRANSLATIONS = {
         "tab_delay_predictor": "🧠 遅延予測",
         "tab_language": "🌐 言語",
         "lang_option_ja": "🇯🇵 日本語",
-        "lang_option_bo": "🇹🇱 チベット語"
+        "lang_option_bo": "🇹🇱 チベット語",
         "lang_tab_title": "🌐 言語設定",
         "lang_tab_desc": "ダッシュボードの言語を選択してください。すべてのラベル、見出し、メッセージが即座に更新されます。",
         "lang_current": "現在の言語",
@@ -356,10 +356,6 @@ TRANSLATIONS = {
         "crowd_low": "🟢 低混雑（快適）",
         "section_network_traffic": "📊 ネットワークトラフィック分析",
         "section_departures": "📅 出発列車",
-        "section_network_traffic": "📊 ネットワークトラフィック分析",
-        "section_departures": "📅 出発列車",
-        "tab_live_map": "🗺️ ライブマップ"
-
         "tab_live_map": "🗺️ ライブマップ",
         "map_train_select_label": "追跡する列車を選択",
         "map_status_label": "ステータス",
