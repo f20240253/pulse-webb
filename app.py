@@ -674,7 +674,7 @@ with tab_lang:
     current_label = lang_labels[lang]
     st.info(f"**{t('lang_current')}:** {current_label}")
 
-    cols = st.columns(3)
+    cols = st.columns(len(lang_labels))
     for idx, (code, label) in enumerate(lang_labels.items()):
         with cols[idx]:
             btn_type = "primary" if (code == lang) else "secondary"
